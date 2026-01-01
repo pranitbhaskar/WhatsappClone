@@ -12,7 +12,7 @@ class UiHelper {
         onPressed: () {
           callback();
         },
-        style:ElevatedButton.styleFrom(shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))),
+        style:ElevatedButton.styleFrom(shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))),  
         child: Text(
           buttonname,
           style: TextStyle(fontSize: 14, color: Colors.white),
