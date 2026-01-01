@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp/screens/OTP/otpscreen.dart';
 import 'package:whatsapp/widgets/uihelper.dart';
 
 class LoginPage extends StatefulWidget{
@@ -29,7 +30,7 @@ class _LoginPageState extends State<LoginPage>{
                    
                       UiHelper.customText(text:"Whatsapp will need to verify your phone", height: 14),
                       UiHelper.customText(text:"number.Carrier charges may apply", height: 14),
-                      UiHelper.customText(text:"What's my number?",color:Colors.blue, height: 14),
+                    GestureDetector(onTap:(){},child:  UiHelper.customText(text:"What's my number?",color:Colors.blue, height: 14)),
 
                     SizedBox(height:50),
                   Padding( 
@@ -99,12 +100,23 @@ class _LoginPageState extends State<LoginPage>{
               ) ,
               floatingActionButton:UiHelper.customButton(
                 callback:(){
-
+                   login(phoneController.text.toString());
                 },
                 buttonname:"Next"
                 ),
               floatingActionButtonLocation:FloatingActionButtonLocation.centerFloat,
                
              );
+    }
+
+    login(String phonenumber)
+    {
+      if(phonenumber=="")
+      {
+        return ScaffoldMessenger.of(context).showSnackBar(SnackBar(content:Text("Enter Phone Number"),backgroundColor: Colors.red,));
+      }
+      else{
+        Navigator.push(context,MaterialPageRoute(builder:(context)=>OTPScreen(phonenumber:phonenumber)));
+      }
     }
 }

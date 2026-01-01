@@ -32,4 +32,24 @@ class UiHelper {
       style: TextStyle(fontSize: height, color: color ?? Color(0XFF5E5E5E),fontWeight:fontweight),
     );
   }
+  static customContainer(TextEditingController controller)
+  {
+    return Container(
+      height:40,
+      width:40,
+      decoration:BoxDecoration(
+        borderRadius:BorderRadius.circular(10),
+        color:Colors.grey.shade400,
+      ),
+      child:Padding(
+        padding:const EdgeInsets.all(8), 
+      child:TextField(
+        controller:controller,
+        decoration:InputDecoration(
+          border:InputBorder.none
+        ),
+      ),
+
+    ));
+  }
 }
