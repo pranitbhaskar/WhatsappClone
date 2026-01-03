@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage>{
                 children: [
                   SizedBox(height:80),
                   Center(
-                    child:UiHelper.customText(text:"Enter your Phone number",height:16,color:Colors.green,fontweight: FontWeight.bold),
+                    child:UiHelper.customText(text:"Enter your Phone number",height:16,color:Colors.pink,fontweight: FontWeight.bold),
                     ),
                     SizedBox(height:30),
                    
@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage>{
 
                     SizedBox(height:50),
                   Padding( 
-                    padding:const EdgeInsets.only(left:50,right:50),
+                    padding:const EdgeInsets.only(left:20,right:20),
                     child:DropdownButtonFormField(items: countries.map((String country)
                    {
                     return DropdownMenuItem(
@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage>{
                    Row(
                     mainAxisAlignment:MainAxisAlignment.center,
                     children: [
-                      SizedBox(width:50,
+                      SizedBox(width:30,
                     child: TextField(
                     keyboardType:TextInputType.number,
                     decoration:InputDecoration(
@@ -80,7 +80,7 @@ class _LoginPageState extends State<LoginPage>{
 
                    SizedBox
                      (
-                      width:330,
+                      width:300,
                        child:TextField(
                          keyboardType: TextInputType.number,
                          controller:phoneController,

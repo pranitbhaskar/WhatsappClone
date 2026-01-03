@@ -27,9 +27,11 @@ class _SplashScreenState extends State<SplashScreen>{
             child:Column(
               mainAxisAlignment:MainAxisAlignment.center,
               children: [
-                Image.asset("assets/images/whatsapplogo.png"),
+                SizedBox(
+                  height:100,
+                  child: Image.asset("assets/images/whatsapplogo.png")),
                 SizedBox(height:20),
-                UiHelper.customText(text:"WhatsApp",height:18,fontweight: FontWeight.bold)
+                UiHelper.customText(text:"WhatsApp",height:20,fontweight: FontWeight.bold)
               ],
             ) ,)
         );
