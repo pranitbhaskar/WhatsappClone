@@ -65,6 +65,13 @@ flutter:
     - assets/images/whatsappcircle.png
     - assets/images/photocam2.png
     - assets/images/smileemoji.png
+    - assets/images/elonmusk.png
+    - assets/images/ambani.png
+    - assets/images/me.png
+    - assets/images/ratantata.png
+    - assets/images/billgates.png
+    - assets/images/sundarpichai.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
